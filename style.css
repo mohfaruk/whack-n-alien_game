@@ -1,5 +1,4 @@
 html {
-  box-sizing: border-box;
   font-size: 10px;
   background: #333;
 }
@@ -16,6 +15,14 @@ body {
   font-family: 'Amatic SC', cursive;
 }
 
+/* Utilities */
+.container {
+  display: block;
+  width: 60%;
+  margin: auto;
+}
+
+/* Header */
 h1 {
   text-align: center;
   color: #fff;
@@ -31,6 +38,7 @@ h1 {
   border-radius: 1rem;
 }
 
+/* Game Section */
 .game {
   width: 600px;
   height: 400px;
@@ -39,13 +47,13 @@ h1 {
   margin: 0 auto;
 }
 
-.hole {
+.rock {
   flex: 1 0 33.33%;
   overflow: hidden;
   position: relative;
 }
 
-.hole:after {
+.rock:after {
   display: block;
   background: url(./images/rock.svg) bottom center no-repeat;
   background-size: contain;
@@ -58,7 +66,7 @@ h1 {
   left: -40px;
 }
 
-.mole {
+.alien {
   background: url('./images/alien.svg') bottom center no-repeat;
   background-size: 70%;
   position: absolute;
@@ -68,18 +76,51 @@ h1 {
   transition:all 0.4s;
 }
 
-.hole.up .mole {
+.rock.up .alien {
   top: 0;
 }
 
 /* Buttons */
-.start {
+.buttons {
   display: flex;
-  margin: 100px auto;
-  width: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-btn {
+  margin: 100px 50px;
+  width: 100px;
   padding: 20px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.start-btn:hover {
+  animation: bounce 0.5s linear;
+  background-color: #fff;
+}
+
+/* Button Animation */
+@keyframes bounce {
+  20% {
+      transform: translateY(-6px);
+  }
+  40% {
+      transform: translateY(0px);
+  }
+  80% {
+      transform: translateY(-2px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Hide Button Effects */
+.hidden {
+  visibility: hidden; 
 }

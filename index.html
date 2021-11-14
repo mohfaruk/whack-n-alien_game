@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Whack A Mole!</title>
+    <title>Whack N Alien</title>
     <link
       href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700"
       rel="stylesheet"
@@ -10,30 +10,44 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <h1>Whack-N-Alien! <span class="score">0</span></h1>
 
-    <div class="game">
-      <div class="hole hole1">
-        <div class="mole"></div>
+  <body>
+    <div class="container">
+      <h1>Whack-N-Alien! <span class="score">0</span></h1>
+
+      <div class="game">
+        <div class="rock rock1">
+          <div class="alien"></div>
+        </div>
+        <div class="rock rock2">
+          <div class="alien"></div>
+        </div>
+        <div class="rock rock3">
+          <div class="alien"></div>
+        </div>
+        <div class="rock rock4">
+          <div class="alien"></div>
+        </div>
+        <div class="rock rock5">
+          <div class="alien"></div>
+        </div>
+        <div class="rock rock6">
+          <div class="alien"></div>
+        </div>
       </div>
-      <div class="hole hole2">
-        <div class="mole"></div>
-      </div>
-      <div class="hole hole3">
-        <div class="mole"></div>
-      </div>
-      <div class="hole hole4">
-        <div class="mole"></div>
-      </div>
-      <div class="hole hole5">
-        <div class="mole"></div>
-      </div>
-      <div class="hole hole6">
-        <div class="mole"></div>
+
+      <div class="buttons">
+        <button id="rookie" class="start-btn" onClick="startGame(this.id)">
+          Rookie
+        </button>
+        <button id="pro" class="start-btn" onClick="startGame(this.id)">
+          Pro
+        </button>
+        <button id="expert" class="start-btn" onClick="startGame(this.id)">
+          Expert
+        </button>
       </div>
     </div>
-    <button class="start" onClick="startGame()">Start!</button>
     <script src="app.js"></script>
   </body>
 </html>
